@@ -2,6 +2,12 @@
 import ModelGenerator from '../components/ModelGenerator.vue'
 import { ref } from 'vue'
 import { data } from '../data.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const goToZoom = () => {
+    router.push('zoom')
+}
 
 let algorithm = ref('SURF')
 
@@ -21,6 +27,9 @@ const getUrl = (type) => {
         <!-- and is set to false when ModelGenerator in "registrate" mode finishes -->
         <ModelGenerator mode="registrate" v-if="data.newUpload" />
         <div v-else-if="data.relativeImageName !== ''">
+            <div class="control">
+                    <input class="button" type="button" value="Zoom" @click="goToZoom" />
+            </div>
             <div class="columns is-centered">
                 <div class="column has-text-centered is-5">
                     <div class="select">

@@ -27,6 +27,7 @@ let active = ref(false)
                 <router-link to="upload" class="nav-link"> Upload </router-link>
                 <router-link to="registration" class="nav-link"> Registration </router-link>
                 <router-link to="model" class="nav-link"> Model </router-link>
+                <router-link to="zoom" class="nav-link"> Zoom </router-link>
             </div>
         </div>
     </nav>
